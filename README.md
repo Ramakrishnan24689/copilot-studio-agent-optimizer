@@ -6,63 +6,63 @@ This repository provides specialized AI prompts that automatically optimize and 
 
 ## 📋 Available Prompts
 
-### 1. 📝 [System Topics](./SystemTopics_BestPractices.md)
+### 1. 📝 [System Topics](./prompts/SystemTopics_BestPractices.md)
 **Use for:** Fallback, Greeting, Goodbye, ConversationStart, EndofConversation, etc.
 - System trigger configuration
 - Conversation flow logic
 - User experience design
 - Error handling patterns
 
-### 2. 🎯 [Triggers & Intent Recognition](./Triggers_BestPractices.md)
+### 2. 🎯 [Triggers & Intent Recognition](./prompts/Triggers_BestPractices.md)
 **Use for:** Topic trigger phrases and intent configuration
 - Trigger phrase optimization (5-10 varied phrases)
 - Natural language understanding
 - Topic overlap prevention
 - Intent recognition effectiveness
 
-### 3. 💬 [Regular Topics](./RegularTopics_BestPractices.md)
+### 3. 💬 [Regular Topics](./prompts/RegularTopics_BestPractices.md)
 **Use for:** Custom business logic topics
 - Topic structure and organization
 - Conversational design
 - Entity usage and slot filling
 - Integration with other components
 
-### 4. 🧠 [Knowledge & Search](./Knowledge_BestPractices.md)
+### 4. 🧠 [Knowledge & Search](./prompts/Knowledge_BestPractices.md)
 **Use for:** Search.mcs.yml and knowledge integration
 - SearchAndSummarizeContent configuration
 - Knowledge source integration
 - Response quality optimization
 - Performance considerations
 
-### 5. ⚙️ [Actions & Power Automate](./Actions_BestPractices.md)
+### 5. ⚙️ [Actions & Power Automate](./prompts/Actions_BestPractices.md)
 **Use for:** External service integrations and automations
 - Connection configuration
 - Input/output mapping
 - Error handling and security
 - User experience during execution
 
-### 6. 🌐 [Bot Settings & Configuration](./BotSettings_BestPractices.md)
+### 6. 🌐 [Bot Settings & Configuration](./prompts/BotSettings_BestPractices.md)
 **Use for:** settings.mcs.yml and bot-level configuration
 - Authentication and security
 - AI settings optimization
 - Feature enablement
 - Performance configuration
 
-### 7. 🔄 [Conversation Management](./ConversationManagement_BestPractices.md)
+### 7. 🔄 [Conversation Management](./prompts/ConversationManagement_BestPractices.md)
 **Use for:** StartOver, Reset, state management topics
 - User confirmation flows
 - State management
 - Variable cleanup
 - Dialog control
 
-### 8. 🤖 [Agent Configuration](./AgentConfiguration_BestPractices.md)
+### 8. 🤖 [Agent Configuration](./prompts/AgentConfiguration_BestPractices.md)
 **Use for:** agent.mcs.yml and GPT agent behavior configuration
 - Agent instructions and behavior
 - Conversation starters optimization
 - GPT capabilities configuration
 - Agent personality and tone
 
-### 9. 🏷️ [Entities & Data Types](./Entities_BestPractices.md)
+### 9. 🏷️ [Entities & Data Types](./prompts/Entities_BestPractices.md)
 **Use for:** entities/*.mcs.yml and data type definitions
 - Entity type selection and configuration
 - Value definitions and synonyms
@@ -91,7 +91,7 @@ These prompts are designed to be used with the **Copilot Studio Extensions** in 
 #### Example Workflow:
 ```
 1. Open Fallback.mcs.yml in VS Code
-2. Copy prompt from SystemTopics_BestPractices.md
+2. Copy prompt from prompts/SystemTopics_BestPractices.md
 3. In Copilot Chat: 
    "[paste prompt]
    
@@ -146,13 +146,13 @@ All prompts are created based on official Microsoft Learn documentation:
 
 | Component Type | File Pattern | Prompt File |
 |---|---|---|
-| System Topics | `Fallback.mcs.yml`, `Greeting.mcs.yml` | [SystemTopics_BestPractices.md](./SystemTopics_BestPractices.md) |
-| Regular Topics | `EnquireAbout*.mcs.yml`, custom topics | [RegularTopics_BestPractices.md](./RegularTopics_BestPractices.md) |
-| Knowledge | `Search.mcs.yml` | [Knowledge_BestPractices.md](./Knowledge_BestPractices.md) |
-| Actions | `actions/*.mcs.yml` | [Actions_BestPractices.md](./Actions_BestPractices.md) |
-| Settings | `settings.mcs.yml` | [BotSettings_BestPractices.md](./BotSettings_BestPractices.md) |
-| Conversation Mgmt | `StartOver.mcs.yml`, `ResetConversation.mcs.yml` | [ConversationManagement_BestPractices.md](./ConversationManagement_BestPractices.md) |
-| Agent Config | `agent.mcs.yml` | [AgentConfiguration_BestPractices.md](./AgentConfiguration_BestPractices.md) |
-| Entities | `entities/*.mcs.yml` | [Entities_BestPractices.md](./Entities_BestPractices.md) |
+| System Topics | `Fallback.mcs.yml`, `Greeting.mcs.yml` | [SystemTopics_BestPractices.md](./prompts/SystemTopics_BestPractices.md) |
+| Regular Topics | `EnquireAbout*.mcs.yml`, custom topics | [RegularTopics_BestPractices.md](./prompts/RegularTopics_BestPractices.md) |
+| Knowledge | `Search.mcs.yml` | [Knowledge_BestPractices.md](./prompts/Knowledge_BestPractices.md) |
+| Actions | `actions/*.mcs.yml` | [Actions_BestPractices.md](./prompts/Actions_BestPractices.md) |
+| Settings | `settings.mcs.yml` | [BotSettings_BestPractices.md](./prompts/BotSettings_BestPractices.md) |
+| Conversation Mgmt | `StartOver.mcs.yml`, `ResetConversation.mcs.yml` | [ConversationManagement_BestPractices.md](./prompts/ConversationManagement_BestPractices.md) |
+| Agent Config | `agent.mcs.yml` | [AgentConfiguration_BestPractices.md](./prompts/AgentConfiguration_BestPractices.md) |
+| Entities | `entities/*.mcs.yml` | [Entities_BestPractices.md](./prompts/Entities_BestPractices.md) |
 
 Each prompt is standalone and can be used independently for focused component analysis and improvement.
