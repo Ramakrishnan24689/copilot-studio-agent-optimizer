@@ -5,17 +5,51 @@
 ```
 Review this Microsoft Copilot Studio knowledge/search component YAML against official best practices from https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-boost-conversations and knowledge integration guidelines.
 
-Check and improve:
-1. SearchAndSummarizeContent configuration and implementation
-2. Knowledge source integration and priority settings
-3. Response quality and summarization effectiveness
-4. Fallback handling for failed searches
-5. Variable handling and data flow
-6. Performance optimization (timeouts, caching)
-7. Integration with conversation flow and other topics
-8. YAML structure and formatting
+⚠️ CRITICAL YAML FORMATTING: 
+- PRESERVE the exact indentation and formatting when providing corrected YAML
+- YAML is indentation-sensitive and incorrect spacing will break the file structure
+- Use exactly 2 spaces for each indentation level consistently
+- NEVER use tabs - only spaces
+- Maintain proper alignment for all nested elements
+- DO NOT modify structural elements like `kind:`, `name:`, `knowledgeSourceId:` - these are framework-required
+- DO NOT change line breaks or combine separate YAML properties on the same line
 
-Focus on official Microsoft recommendations for knowledge integration, generative AI features, and search optimization. Provide corrected YAML if issues found.
+🚨 STRUCTURAL PRESERVATION FOR KNOWLEDGE:
+- Keep knowledge framework properties (`kind:`, `name:`, `knowledgeSourceId:`, `contentLocation:`) exactly as they are
+- Preserve all knowledge configuration structure (SearchAndSummarizeContent, file references)
+- Only modify content within descriptions and search parameters
+- Never merge separate YAML properties onto the same line
+
+🎯 MINIMAL CHANGES ONLY: Only suggest changes that:
+- Fix clear violations of Microsoft's official best practices
+- Address significant security, performance, or functionality issues
+- Have substantial impact on user experience or bot effectiveness
+- Are explicitly recommended in official Microsoft documentation
+
+🚫 AVOID:
+- Adding unnecessary complexity to search configurations
+- Creative additions that weren't in the original knowledge setup
+- Over-engineering basic search functionality
+- Adding advanced features unless explicitly needed
+- Modifying knowledge YAML structure elements (kind, name, knowledgeSourceId, contentLocation)
+- Changing indentation of existing properly formatted YAML
+- Combining separate YAML properties on the same line
+
+✅ FOCUS ON:
+1. SearchAndSummarizeContent configuration fixes
+2. Basic knowledge source corrections
+3. Essential variable handling improvements
+4. Critical YAML syntax errors
+
+⚠️ KNOWLEDGE YAML STRUCTURE WARNING: NEVER modify these framework elements:
+- `kind:` properties (keep exactly as is)
+- `name:` (must be on separate line)
+- `knowledgeSourceId:` structure
+- `contentLocation:` properties
+- Do NOT combine properties like "kind: name:" - this breaks YAML
+5. Basic performance setting corrections
+
+KEEP IT SIMPLE: Most knowledge configurations should maintain their core functionality unless there are clear violations to fix.
 ```
 
 ## Component-Specific Guidelines
@@ -52,12 +86,11 @@ Focus on official Microsoft recommendations for knowledge integration, generativ
 - Integration with main conversation topics
 - User experience during knowledge retrieval
 
-### 🔧 Performance Optimization
-- Search timeout configurations
-- Response caching strategies
-- Knowledge source prioritization
-- Content indexing optimization
-- User experience during processing
+## ⚠️ YAML Formatting Critical
+- Use exactly 2 spaces for each indentation level
+- Never use tabs - only spaces
+- Maintain consistent alignment for all nested elements
+- Preserve original indentation structure when making improvements
 
 ### 📚 Reference Guidelines
 - [Knowledge Integration](https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-boost-conversations)

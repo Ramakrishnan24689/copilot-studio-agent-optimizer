@@ -5,17 +5,51 @@
 ```
 Review this Microsoft Copilot Studio agent configuration YAML against official best practices from https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-ai-features and agent configuration guidelines.
 
-Check and improve:
-1. Agent instructions clarity and completeness
-2. Conversation starters effectiveness and variety
-3. GPT capabilities configuration optimization
-4. Agent personality and tone consistency
-5. Task-specific instruction design
-6. Safety and guardrails implementation
-7. Integration with bot knowledge and topics
-8. YAML structure and metadata formatting
+⚠️ CRITICAL YAML FORMATTING: 
+- PRESERVE the exact indentation and formatting when providing corrected YAML
+- YAML is indentation-sensitive and incorrect spacing will break the file structure
+- Use exactly 2 spaces for each indentation level consistently
+- NEVER use tabs - only spaces
+- Maintain proper alignment for all nested elements
+- DO NOT modify structural elements like `kind:`, `name:`, `instructions:` - these are framework-required
+- DO NOT change line breaks or combine separate YAML properties on the same line
 
-Focus on official Microsoft recommendations for agent behavior design, instruction crafting, and conversation starter optimization. Provide corrected YAML if issues found.
+🚨 STRUCTURAL PRESERVATION FOR AGENT CONFIG:
+- Keep agent framework properties (`kind:`, `name:`, `instructions:`, `conversationStarters:`) exactly as they are
+- Preserve all agent configuration structure (language, capabilities, etc.)
+- Only modify content within instruction text and conversation starter messages
+- Never merge separate YAML properties onto the same line
+
+🎯 MINIMAL CHANGES ONLY: Only suggest changes that:
+- Fix clear violations of Microsoft's official best practices
+- Address significant security, performance, or functionality issues
+- Have substantial impact on user experience or bot effectiveness
+- Are explicitly recommended in official Microsoft documentation
+
+🚫 AVOID:
+- Adding unnecessary complexity to agent configurations
+- Creative additions that weren't in the original agent setup
+- Over-engineering basic agent functionality
+- Adding advanced features unless explicitly needed
+- Modifying agent YAML structure elements (kind, name, instructions, conversationStarters)
+- Changing indentation of existing properly formatted YAML
+- Combining separate YAML properties on the same line
+
+✅ FOCUS ON:
+1. Agent instruction clarity fixes
+2. Basic conversation starter improvements
+3. Essential GPT capability corrections
+4. Critical YAML syntax errors
+
+⚠️ AGENT CONFIG YAML STRUCTURE WARNING: NEVER modify these framework elements:
+- `kind:` properties (keep exactly as is)
+- `name:` (must be on separate line)
+- `instructions:` structure
+- `conversationStarters:` properties
+- Do NOT combine properties like "kind: name:" - this breaks YAML
+5. Basic agent personality setting corrections
+
+KEEP IT SIMPLE: Most agent configurations should maintain their core functionality unless there are clear violations to fix.
 ```
 
 ## Component-Specific Guidelines
@@ -23,127 +57,38 @@ Focus on official Microsoft recommendations for agent behavior design, instructi
 ### ✅ Agent Configuration Checklist
 - [ ] Clear, specific agent instructions defined
 - [ ] Appropriate agent personality and tone set
-- [ ] 5-8 varied conversation starters provided
-- [ ] Safety guidelines and constraints included
+- [ ] 3-5 varied conversation starters provided
+- [ ] Basic safety guidelines included
 - [ ] Task-specific behaviors clearly outlined
-- [ ] Integration points with bot components defined
 - [ ] GPT capabilities appropriately configured
-- [ ] YAML structure and formatting correct
+- [ ] Correct YAML structure and formatting
 - [ ] Agent name and description are descriptive
 
-### 🎯 Key Configuration Areas
+### 🎯 Essential Configuration Areas
 
 **Agent Instructions:**
 - Clear purpose and role definition
-- Specific behavioral guidelines and constraints
+- Basic behavioral guidelines
 - Task-oriented instruction organization
-- Safety and ethical considerations
 - Communication style and tone requirements
-- Integration with bot knowledge sources
 
 **Conversation Starters:**
-- Variety of entry points for different user intents
-- Clear, actionable starter prompts
-- Natural language and user-friendly phrasing
-- Coverage of main bot functionality areas
-- Progressive complexity from simple to advanced
-- Consistent with agent personality and purpose
+- 3-5 diverse starter topics
+- User-friendly and engaging prompts
+- Representative of bot capabilities
+- Clear and actionable language
 
 **GPT Capabilities:**
-- Appropriate capability enablement
-- Integration with Copilot Studio features
-- Performance optimization settings
-- Security and privacy considerations
-- Resource usage optimization
+- Appropriate feature enablement
+- Basic configuration settings
+- Integration with bot knowledge
 
-### 💬 Instruction Design Best Practices
-
-**Clarity and Specificity:**
-- Use clear, unambiguous language
-- Define specific behaviors and responses
-- Include concrete examples where helpful
-- Avoid contradictory or conflicting instructions
-- Maintain consistency across all guidelines
-
-**Safety and Guardrails:**
-- Include appropriate content filtering guidelines
-- Define boundaries for agent responses
-- Implement escalation procedures for complex issues
-- Protect user privacy and data security
-- Ensure compliance with organizational policies
-
-**Task Orientation:**
-- Focus instructions on primary bot objectives
-- Define success criteria and outcomes
-- Include error handling and recovery guidance
-- Specify data collection and processing rules
-- Integrate with existing bot workflows
-
-### 🎭 Personality and Tone Design
-
-**Consistent Character:**
-- Define clear personality traits
-- Maintain consistent tone across interactions
-- Align personality with brand and purpose
-- Consider target audience preferences
-- Balance professionalism with approachability
-
-**Communication Style:**
-- Use appropriate language level for audience
-- Maintain helpful and supportive tone
-- Include empathy and understanding
-- Provide clear and actionable guidance
-- Ensure accessibility for diverse users
-
-### 🚀 Conversation Starter Optimization
-
-**Variety and Coverage:**
-- Cover all major bot functionality areas
-- Provide multiple entry points for common tasks
-- Include both simple and complex scenarios
-- Address different user knowledge levels
-- Offer progressive engagement opportunities
-
-**User Experience:**
-- Use natural, conversational language
-- Make starters immediately actionable
-- Provide clear expectations for outcomes
-- Include helpful context and guidance
-- Ensure easy discovery and selection
-
-### 🔧 Technical Implementation
-
-**YAML Structure:**
-- Proper indentation and formatting
-- Correct property naming and syntax
-- Appropriate use of multi-line strings
-- Clear organization and readability
-- Consistent style and conventions
-
-**Integration Considerations:**
-- Alignment with bot topics and actions
-- Compatibility with knowledge sources
-- Integration with external services
-- Performance and scalability factors
-- Maintenance and update procedures
-
-### 📊 Performance Optimization
-
-**Instruction Efficiency:**
-- Concise yet comprehensive guidelines
-- Prioritized instruction hierarchy
-- Optimized for AI model processing
-- Balanced detail and performance
-- Regular review and refinement
-
-**Conversation Flow:**
-- Seamless integration with bot topics
-- Natural progression from starters to actions
-- Appropriate handoff mechanisms
-- User journey optimization
-- Engagement retention strategies
+## ⚠️ YAML Formatting Critical
+- Use exactly 2 spaces for each indentation level
+- Never use tabs - only spaces
+- Maintain consistent alignment for all nested elements
+- Preserve original indentation structure when making improvements
 
 ### 📚 Reference Guidelines
-- [Agent Configuration](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-ai-features)
-- [Conversation Design](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/topic-authoring-best-practices)
-- [AI Features](https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-boost-conversations)
+- [Agent Configuration Best Practices](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-ai-features)
+- [Conversation Starters](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/conversation-starters)

@@ -5,17 +5,50 @@
 ```
 Review this Microsoft Copilot Studio action YAML against official best practices from https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-use-flow and action integration guidelines.
 
-Check and improve:
-1. Connection reference configuration and security
-2. Input/output variable mapping and validation
-3. Error handling and recovery mechanisms
-4. User communication during action execution
-5. Authentication and authorization settings
-6. Performance considerations and timeouts
-7. Integration with conversation flow
-8. YAML structure and action metadata
+⚠️ CRITICAL YAML FORMATTING: 
+- PRESERVE the exact indentation and formatting when providing corrected YAML
+- YAML is indentation-sensitive and incorrect spacing will break the file structure
+- Use exactly 2 spaces for each indentation level consistently
+- NEVER use tabs - only spaces
+- Maintain proper alignment for all nested elements
+- DO NOT modify structural elements like `kind:`, `name:`, `connectionReferenceName:` - these are framework-required
+- DO NOT change line breaks or combine separate YAML properties on the same line
 
-Focus on official Microsoft recommendations for Power Automate integration, security best practices, and user experience during action execution. Provide corrected YAML if issues found.
+🚨 STRUCTURAL PRESERVATION FOR ACTIONS:
+- Keep action framework properties (`kind:`, `name:`, `connectionReferenceName:`) exactly as they are
+- Preserve all action configuration structure (inputs, outputs, settings)
+- Only modify content within parameter values and descriptions
+- Never merge separate YAML properties onto the same line
+
+🎯 MINIMAL CHANGES ONLY: Only suggest changes that:
+- Fix clear violations of Microsoft's official best practices
+- Address significant security, performance, or functionality issues
+- Have substantial impact on user experience or bot effectiveness
+- Are explicitly recommended in official Microsoft documentation
+
+🚫 AVOID:
+- Adding unnecessary complexity to action configurations
+- Creative additions that weren't in the original action
+- Over-engineering basic action functionality
+- Adding advanced features unless explicitly needed
+- Modifying action YAML structure elements (kind, name, connectionReferenceName)
+- Changing indentation of existing properly formatted YAML
+- Combining separate YAML properties on the same line
+
+✅ FOCUS ON:
+1. Connection reference configuration fixes
+2. Basic input/output variable corrections
+3. Essential error handling improvements
+4. Critical YAML syntax errors
+
+⚠️ ACTION YAML STRUCTURE WARNING: NEVER modify these framework elements:
+- `kind:` properties (keep exactly as is)
+- `name:` (must be on separate line)
+- `connectionReferenceName:` structure
+- Do NOT combine properties like "kind: name:" - this breaks YAML
+5. Security setting corrections
+
+KEEP IT SIMPLE: Most actions should maintain their core functionality unless there are clear violations to fix.
 ```
 
 ## Component-Specific Guidelines
@@ -57,19 +90,11 @@ Focus on official Microsoft recommendations for Power Automate integration, secu
 - Clear success and failure communication
 - Seamless integration with conversation flow
 
-### 🔒 Security Considerations
-- Authentication method selection
-- Data privacy and protection
-- Access control and permissions
-- Secure parameter passing
-- Audit and compliance requirements
-
-### ⚡ Performance Optimization
-- Action timeout configuration
-- Asynchronous execution patterns
-- Resource usage optimization
-- Caching strategies for repeated calls
-- Load balancing considerations
+## ⚠️ YAML Formatting Critical
+- Use exactly 2 spaces for each indentation level
+- Never use tabs - only spaces
+- Maintain consistent alignment for all nested elements
+- Preserve original indentation structure when making improvements
 
 ### 📚 Reference Guidelines
 - [Power Automate Integration](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-use-flow)

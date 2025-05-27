@@ -6,7 +6,7 @@
 
 Transform your Microsoft Copilot Studio agents from good to exceptional! This repository contains **AI-powered prompts** that automatically review and optimize your `.mcs.yml` files using **GitHub Copilot** directly in **Visual Studio Code**.
 
-**In 30 seconds:** Add prompt context → Ask Copilot to analyze → Get optimized YAML → Apply improvements → Deploy better agents! 🚀
+**In 30 seconds:** Clone your project → Add context → Get optimized YAML → Apply improvements → Deploy better agents! 🚀
 
 ### ✨ Key Benefits
 - ⚡ **Instant optimization** - Get improvements in seconds, not hours
@@ -24,8 +24,7 @@ Before you begin, ensure you have:
 2. **Microsoft Copilot Studio Extension** for VS Code
    - Install from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-copilotstudio.vscode-copilotstudio)
    - Or search "Copilot Studio" in VS Code Extensions (`Ctrl+Shift+X`)
-3. **GitHub Copilot** subscription (works with GPT-4o, Claude Sonnet, and other AI models)
-4. **Microsoft Copilot Studio project** with `.mcs.yml` files
+3. **GitHub Copilot** (free tier available, works with GPT-4o, Claude Sonnet, and other AI models)
 
 ![VS Code Extensions Setup](./images/vscode-extensions-setup.png)
 
@@ -52,56 +51,43 @@ git clone https://github.com/[username]/copilot-studio-agent-optimizer.git && co
 ### 2️⃣ **Choose Your Component**
 Pick the prompt file that matches your YAML component:
 - `agent.mcs.yml` → Use [AgentConfiguration_BestPractices.md](./prompts/AgentConfiguration_BestPractices.md)
-- `CustomTopic.mcs.yml` → Use [RegularTopics_BestPractices.md](./prompts/CustomTopics_BestPractices.md)
+- `CustomTopic.mcs.yml` → Use [CustomTopics_BestPractices.md](./prompts/CustomTopics_BestPractices.md)
 - `Fallback.mcs.yml` → Use [SystemTopics_BestPractices.md](./prompts/SystemTopics_BestPractices.md)
 - `Search.mcs.yml` → Use [Knowledge_BestPractices.md](./prompts/Knowledge_BestPractices.md)
 - And so on... ([see full reference table](#🔧-component-quick-reference))
 
-### 3️⃣ **Add Context & Analyze in VS Code**
-![Quick Start Demo - Coming Soon](./images/quick-start-demo.gif)
-*Image placeholder: Animated GIF showing the add context → ask Copilot → get results workflow*
+### 3️⃣ **Connect Your Copilot Studio Agent**
 
-#### Step-by-Step Instructions:
+To use the AI-powered optimization, connect to your Copilot Studio agent directly from VS Code:
 
-1. **Open your Copilot Studio project** in VS Code
-   ![VS Code Project Structure](./images/vscode-project-structure.png)
-   *Image placeholder: Screenshot of VS Code with Copilot Studio project structure showing various .mcs.yml files*
+1. **Open VS Code** with this repository 
+2. **Open Copilot Studio extension** (from the sidebar or Ctrl+Shift+P → "Copilot Studio")
+3. **Select your environment** from the dropdown
+4. **Choose your agent** from the available agents in that environment
+5. **Clone your agent** to a local subdirectory(/cloned-agents) using the extension's clone option
+![Clone Agent](./images/copilot-studio-extension-clone-agent.png)
+6. **Agent's YAML files will be accessible** in the VS Code workspace for optimization
+![MCS files](./images/clone-agent-sub-directory.png)
 
-2. **Select the YAML file** you want to optimize (e.g., `Fallback.mcs.yml`, `agent.mcs.yml`)
+This approach keeps everything in one workspace, making it easy for GitHub Copilot to access both the optimization prompts and your agent's YAML files.
 
-3. **Open GitHub Copilot Chat** (`Ctrl+Shift+I` or click the chat icon)
-   ![Copilot Chat Interface](./images/copilot-chat-interface.png)
-   *Image placeholder: Screenshot of Copilot Chat interface in VS Code*
+### 4️⃣ **Optimize Your YAML Files**
 
-4. **Add context sources** by clicking the "Add context" button (📎):
-   ![Add Context Demo](./images/add-context-demo.png)
-   *Image placeholder: Screenshot showing the Add Context button and file selection*
-   
-   - **Select the relevant prompt file** from this repository (e.g., `copilot-studio-agent-optimizer/prompts/RegularTopics_BestPractices.md`)
-   - **Add `@workspace`** to include your Copilot Studio project context
-   - **Optionally add your specific YAML file** for direct reference
+1. **Ensure your agent is connected** in the Copilot Studio extension
+2. **Open Copilot Chat** (Ctrl+Shift+I or click the chat icon)  
+3. **Click "Add context"** (📎) to select files:
+   - Add the relevant prompt file from `prompts/` folder
+   - Add your agent's YAML file from the connected workspace
+4. **Ask for optimization** using both contexts
 
-5. **Ask Copilot to analyze** with a simple instruction:
-   ```
-   Example prompts:
-   "Analyze my CustomOrderStatus.mcs.yml topic using the best practices guidelines"
-   
-   "Review this RegularTopic and suggest improvements following Microsoft standards"
-   
-   "Optimize my Fallback.mcs.yml based on the provided best practices"
-   ```
+**Example Command:**
+```
+Using the provided best practices prompt, please analyze my [YourTopicName] topic and suggest improvements following Microsoft standards.
+```
 
-6. **Review AI suggestions** and apply improvements directly in your YAML file
+>![Simplified workflow](./images/copy-paste-workflow.png)
 
-#### Pro Tips:
-- **Use multiple context sources** - Add both the prompt file from this repository AND @workspace for comprehensive analysis
-- **Keep both repositories open** - Have this repository and your Copilot Studio project both accessible in VS Code
-- **Be specific in your request** - Reference the exact YAML file you want analyzed
-- **Apply changes incrementally** - Test each improvement before moving to the next
-- **Leverage YAML validation** - VS Code will highlight syntax errors immediately
-- **Ask follow-up questions** - The context remains available throughout the conversation
-
-### 4️⃣ **See the Transformation**
+### 5️⃣ **See the Transformation**
 
 #### RegularTopic Before vs After Example
 
@@ -120,7 +106,7 @@ Pick the prompt file that matches your YAML component:
 - **Error Handling:** Improved fallback responses and user guidance
 - **Response Quality:** More conversational and contextually appropriate responses
 
-### 5️⃣ **Experience the Difference**
+### 6️⃣ **Experience the Difference**
 
 #### End User Conversation Quality
 
@@ -167,7 +153,7 @@ Pick the prompt file that matches your YAML component:
 - Topic overlap prevention
 - Intent recognition effectiveness
 
-### 3. 💬 [Regular Topics](./prompts/RegularTopics_BestPractices.md)
+### 3. 💬 [Regular Topics](./prompts/CustomTopics_BestPractices.md)
 **Use for:** Custom business logic topics
 - Topic structure and organization
 - Conversational design
@@ -225,35 +211,31 @@ These prompts are designed to be used with the **Copilot Studio Extensions** in 
 #### Recommended Setup:
 1. **Visual Studio Code** with Copilot Studio Extensions installed
 2. **GitHub Copilot** with your preferred AI model (GPT-4o, Claude Sonnet, etc.)
-3. **Open your Copilot Studio project** containing .mcs.yml files
+3. **Connect to your Copilot Studio environment** using the VS Code extension
 
-#### Usage Steps:
-1. **Open the relevant YAML file** in VS Code (e.g., `Fallback.mcs.yml`, `agent.mcs.yml`)
-2. **Open GitHub Copilot Chat** (`Ctrl+Shift+I`)
-3. **Add context sources** using the "Add context" button (📎):
-   - Select the appropriate prompt file from the `prompts/` folder
-   - Add `@workspace` for project context
-4. **Ask for analysis** with a simple instruction like "Analyze this YAML file using the best practices guidelines"
-5. **Review the AI-generated improvements** that follow Microsoft best practices
-6. **Apply suggested changes** directly in VS Code with Copilot's assistance
+#### Simple Workflow:
+1. **Clone this repository** and open in VS Code
+2. **Connect to your Copilot Studio agent**:
+   - Open Copilot Studio extension in VS Code
+   - Select your environment from the dropdown
+   - Choose your agent from the available list
+   - Clone the agent to a local subdirectory using the extension
+3. **Open Copilot Chat** (Ctrl+Shift+I)
+4. **Add context sources** using the "Add context" button (📎):
+   - Select the appropriate prompt file from `prompts/` folder
+   - Add your agent's YAML files from the cloned subdirectory
+5. **Ask for analysis** with both contexts available
 
 #### Example Workflow:
 ```
-1. Open Fallback.mcs.yml in VS Code
-2. Open GitHub Copilot Chat (Ctrl+Shift+I)
-3. Click "Add context" → Select prompts/SystemTopics_BestPractices.md
-4. Add @workspace for full project context
-5. Ask: "Analyze my Fallback.mcs.yml using the best practices guidelines"
-6. Review AI suggestions for improvements
-7. Apply changes with Copilot's code assistance
+1. Clone this repository
+2. code . (opens VS Code)
+3. Open Copilot Studio extension → Select environment → Choose agent → Clone agent
+4. Open Copilot Chat (Ctrl+Shift+I)
+5. Add context: prompts/CustomTopics_BestPractices.md
+6. Add context: YourTopicName.mcs.yml (from cloned agent subdirectory)
+7. Ask: "Using the best practices prompt, analyze my topic and suggest improvements"
 ```
-
-### Alternative: Copy-Paste Method:
-If you prefer the traditional approach:
-1. **Copy the prompt** from the relevant component file
-2. **Paste the prompt** in Copilot Chat
-3. **Reference your YAML file** using `@workspace/filename.mcs.yml`
-4. **Review suggestions** and apply improvements manually
 
 ## 🎯 Why Use These Prompts with VS Code + GitHub Copilot?
 
@@ -296,7 +278,7 @@ All prompts are created based on official Microsoft Learn documentation:
 | Component Type | File Pattern | Prompt File |
 |---|---|---|
 | System Topics | `Fallback.mcs.yml`, `Greeting.mcs.yml` | [SystemTopics_BestPractices.md](./prompts/SystemTopics_BestPractices.md) |
-| Regular Topics | `EnquireAbout*.mcs.yml`, custom topics | [RegularTopics_BestPractices.md](./prompts/RegularTopics_BestPractices.md) |
+| Regular Topics | `EnquireAbout*.mcs.yml`, custom topics | [CustomTopics_BestPractices.md](./prompts/CustomTopics_BestPractices.md) |
 | Knowledge | `Search.mcs.yml` | [Knowledge_BestPractices.md](./prompts/Knowledge_BestPractices.md) |
 | Actions | `actions/*.mcs.yml` | [Actions_BestPractices.md](./prompts/Actions_BestPractices.md) |
 | Settings | `settings.mcs.yml` | [BotSettings_BestPractices.md](./prompts/BotSettings_BestPractices.md) |

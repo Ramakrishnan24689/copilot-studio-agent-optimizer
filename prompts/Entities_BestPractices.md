@@ -5,17 +5,51 @@
 ```
 Review this Microsoft Copilot Studio entity YAML against official best practices from https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/slot-filling-best-practices and entity configuration guidelines.
 
-Check and improve:
-1. Entity type selection and configuration (ClosedList, Regex, ML, etc.)
-2. Item definitions with clear display names and synonyms
-3. Smart matching enablement and optimization
-4. Entity reusability and naming conventions
-5. Comprehensive value coverage for use cases
-6. User-friendly display names and descriptions
-7. Integration with topic slot filling
-8. YAML structure and entity metadata
+⚠️ CRITICAL YAML FORMATTING: 
+- PRESERVE the exact indentation and formatting when providing corrected YAML
+- YAML is indentation-sensitive and incorrect spacing will break the file structure
+- Use exactly 2 spaces for each indentation level consistently
+- NEVER use tabs - only spaces
+- Maintain proper alignment for all nested elements
+- DO NOT modify structural elements like `kind:`, `definition:`, `items:` - these are framework-required
+- DO NOT change line breaks or combine separate YAML properties on the same line
 
-Focus on official Microsoft recommendations for entity design, slot filling optimization, and natural language understanding effectiveness. Provide corrected YAML if issues found.
+🚨 STRUCTURAL PRESERVATION FOR ENTITIES:
+- Keep entity framework properties (`kind:`, `definition:`, `items:`, `displayName:`) exactly as they are
+- Preserve all entity configuration structure (ClosedListEntity, RegexEntity, etc.)
+- Only modify content within item values, display names, and synonyms
+- Never merge separate YAML properties onto the same line
+
+🎯 MINIMAL CHANGES ONLY: Only suggest changes that:
+- Fix clear violations of Microsoft's official best practices
+- Address significant security, performance, or functionality issues
+- Have substantial impact on user experience or bot effectiveness
+- Are explicitly recommended in official Microsoft documentation
+
+🚫 AVOID:
+- Adding unnecessary complexity to entity configurations
+- Creative additions that weren't in the original entity
+- Over-engineering basic entity functionality
+- Adding advanced features unless explicitly needed
+- Modifying entity YAML structure elements (kind, definition, items, displayName)
+- Changing indentation of existing properly formatted YAML
+- Combining separate YAML properties on the same line
+
+✅ FOCUS ON:
+1. Entity type selection corrections (ClosedList, Regex, ML, etc.)
+2. Basic item definition improvements
+3. Essential display name and synonym fixes
+4. Critical YAML syntax errors
+
+⚠️ ENTITY YAML STRUCTURE WARNING: NEVER modify these framework elements:
+- `kind:` properties (keep exactly as is)
+- `definition:` (must be on separate line)
+- `items:` structure
+- `displayName:` properties
+- Do NOT combine properties like "kind: definition:" - this breaks YAML
+5. Basic smart matching setting corrections
+
+KEEP IT SIMPLE: Most entities should maintain their core functionality unless there are clear violations to fix.
 ```
 
 ## Component-Specific Guidelines
@@ -55,129 +89,11 @@ Focus on official Microsoft recommendations for entity design, slot filling opti
 - Balance accuracy with processing speed
 - Monitor and adjust based on usage patterns
 
-### 🏷️ Entity Design Best Practices
-
-**Display Names:**
-- Clear, descriptive, and user-friendly
-- Consistent capitalization and formatting
-- Avoid technical jargon or internal codes
-- Consider internationalization requirements
-- Maintain brevity while being descriptive
-
-**Value Organization:**
-- Logical grouping of related items
-- Hierarchical structure when appropriate
-- Consistent ordering (alphabetical, by importance, etc.)
-- Avoid duplicates and overlapping values
-- Consider user mental models and expectations
-
-**Synonyms and Variations:**
-- Include common alternative phrasings
-- Account for plural and singular forms
-- Consider abbreviations and acronyms
-- Include colloquial and informal terms
-- Test with real user input patterns
-
-### 🔄 Slot Filling Optimization
-
-**Entity Integration:**
-- Seamless integration with topic question nodes
-- Efficient slot filling without redundant questions
-- Clear validation and error handling
-- Appropriate default values and suggestions
-- Progressive disclosure for complex entities
-
-**User Experience:**
-- Natural conversation flow
-- Clear prompts when entity clarification needed
-- Helpful examples and guidance
-- Error recovery mechanisms
-- Confirmation patterns for critical values
-
-**Performance Considerations:**
-- Optimize entity size for processing speed
-- Balance comprehensiveness with performance
-- Consider caching for frequently used entities
-- Monitor recognition accuracy and speed
-- Regular review and optimization cycles
-
-### 📊 Entity Types and Use Cases
-
-**ClosedList Entities:**
-- Predefined options (sizes, colors, categories)
-- Multiple choice selections
-- Status values and states
-- Product types and variations
-- Service offerings and packages
-
-**Regex Entities:**
-- Email addresses and contact information
-- Phone numbers and postal codes
-- Product SKUs and identification numbers
-- Custom format validation
-- Pattern-based data extraction
-
-**ML Entities:**
-- Names and free-text identification
-- Flexible categorization needs
-- Context-sensitive recognition
-- Learning from user interactions
-- Adaptive recognition patterns
-
-### 🔧 Technical Implementation
-
-**YAML Structure:**
-- Proper indentation and formatting
-- Consistent property naming
-- Clear item organization
-- Appropriate use of IDs and references
-- Maintainable structure for updates
-
-**Integration Points:**
-- Topic question node compatibility
-- Variable assignment and processing
-- Condition and branching logic integration
-- External system data mapping
-- API and service integration preparation
-
-**Maintenance Considerations:**
-- Version control for entity changes
-- Testing procedures for entity updates
-- Impact analysis for modification
-- Documentation and change tracking
-- Rollback procedures if needed
-
-### 🌐 Scalability and Reusability
-
-**Entity Reuse:**
-- Design for cross-topic utilization
-- Avoid topic-specific entity definitions
-- Consider global vs. local entity scope
-- Plan for entity library development
-- Standardize common entity patterns
-
-**Future Expansion:**
-- Anticipate new values and categories
-- Design flexible entity structures
-- Plan for internationalization needs
-- Consider API-driven entity updates
-- Implement dynamic entity loading where appropriate
-
-### 📈 Performance Monitoring
-
-**Recognition Accuracy:**
-- Monitor entity recognition success rates
-- Track user correction patterns
-- Analyze failed recognition attempts
-- Implement feedback loops for improvement
-- Regular accuracy assessment cycles
-
-**Usage Analytics:**
-- Track most/least used entity values
-- Identify missing values from user inputs
-- Monitor entity performance impact
-- Analyze slot filling efficiency
-- User satisfaction with entity interactions
+## ⚠️ YAML Formatting Critical
+- Use exactly 2 spaces for each indentation level
+- Never use tabs - only spaces
+- Maintain consistent alignment for all nested elements
+- Preserve original indentation structure when making improvements
 
 ### 📚 Reference Guidelines
 - [Entity Types](https://learn.microsoft.com/en-us/microsoft-copilot-studio/entities)

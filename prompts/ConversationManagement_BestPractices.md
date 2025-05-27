@@ -5,118 +5,90 @@
 ```
 Review this Microsoft Copilot Studio conversation management topic YAML against official best practices from https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-system-topics and conversation flow guidelines.
 
-Check and improve:
-1. User confirmation flows and validation
-2. Conversation state management and variable handling
-3. Variable cleanup and reset procedures
-4. User experience and messaging quality
-5. Integration with other system topics
-6. Error handling and recovery options
-7. Conversation outcome tracking
-8. YAML structure and flow logic
+⚠️ CRITICAL YAML FORMATTING: 
+- PRESERVE the exact indentation and formatting when providing corrected YAML
+- YAML is indentation-sensitive and incorrect spacing will break the file structure
+- Use exactly 2 spaces for each indentation level consistently
+- NEVER use tabs - only spaces
+- Maintain proper alignment for all nested elements
+- DO NOT modify structural elements like `kind:`, `beginDialog:`, `actions:` - these are framework-required
+- DO NOT change line breaks or combine separate YAML properties on the same line
 
-Focus on official Microsoft recommendations for conversation control, state management, and user experience design. Provide corrected YAML if issues found.
+🚨 STRUCTURAL PRESERVATION FOR CONVERSATION TOPICS:
+- Keep topic framework properties (`kind:`, `beginDialog:`, `actions:`, `id:`) exactly as they are
+- Preserve all conversation flow structure (OnRecognizedIntent, conditions, etc.)
+- Only modify content within prompts, messages, and condition values
+- Never merge separate YAML properties onto the same line
+
+🎯 MINIMAL CHANGES ONLY: Only suggest changes that:
+- Fix clear violations of Microsoft's official best practices
+- Address significant security, performance, or functionality issues
+- Have substantial impact on user experience or bot effectiveness
+- Are explicitly recommended in official Microsoft documentation
+
+🚫 AVOID:
+- Adding unnecessary complexity to conversation management
+- Creative additions that weren't in the original topic
+- Over-engineering basic conversation flow functionality
+- Adding advanced features unless explicitly needed
+- Modifying conversation YAML structure elements (kind, beginDialog, actions, id)
+- Changing indentation of existing properly formatted YAML
+- Combining separate YAML properties on the same line
+
+✅ FOCUS ON:
+1. User confirmation flow fixes
+2. Basic conversation state corrections
+3. Essential variable cleanup improvements
+4. Critical YAML syntax errors
+
+⚠️ CONVERSATION YAML STRUCTURE WARNING: NEVER modify these framework elements:
+- `id: main` (keep exactly as is, on separate line)
+- `kind:` properties
+- `beginDialog:` structure
+- `actions:` (must be on separate line)
+- Do NOT combine properties like "id: main beginDialog:" - this breaks YAML
+5. Basic user messaging improvements
+
+KEEP IT SIMPLE: Most conversation management topics should maintain their core functionality unless there are clear violations to fix.
 ```
 
 ## Component-Specific Guidelines
 
 ### ✅ Conversation Management Checklist
 - [ ] Clear user confirmation flows implemented
-- [ ] Proper conversation state management
+- [ ] Basic conversation state management
 - [ ] Variable cleanup procedures defined
 - [ ] User-friendly prompts and messaging
-- [ ] Seamless integration with system topics
-- [ ] Error handling and recovery paths
-- [ ] Conversation outcome tracking
+- [ ] Essential error handling
 - [ ] Appropriate start behavior configuration
-- [ ] Clear dialog management and control flow
+- [ ] Correct YAML structure and formatting
 
-### 🎯 Key Management Areas
+### 🎯 Essential Management Areas
 
 **State Management:**
-- Conversation variable scope and lifecycle
+- Basic conversation variable handling
 - Proper variable initialization and cleanup
-- State persistence across dialog transitions
-- Memory management and performance
 - Context preservation during topic switches
 
-**User Confirmation Flows:**
-- Clear confirmation prompts and options
-- Binary choice handling (Yes/No, Continue/Stop)
-- User intent validation and clarification
-- Graceful handling of unclear responses
-- Retry mechanisms for invalid inputs
+**User Experience:**
+- Clear confirmation flows and prompts
+- User-friendly messaging and tone
+- Basic error handling and recovery
 
 **Dialog Control:**
-- StartBehavior configuration (CancelOtherTopics, etc.)
-- Dialog replacement and redirection
-- Topic queue management
-- Interruption handling and policies
-- Conversation flow orchestration
+- Appropriate start behavior configuration
+- Essential conversation outcome tracking
+- Basic integration with system topics
 
-### 🔄 Reset & Restart Operations
+### 📚 Reference Guidelines
+- [Conversation Management Best Practices](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-system-topics)
+- [System Topics](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-system-topics)
 
-**Conversation Reset:**
-- Complete variable cleanup (ConversationScopedVariables)
-- Dialog cancellation and queue clearing
-- User state reinitialization
-- Context restoration for fresh start
-- Integration with greeting and start topics
-
-**Start Over Functionality:**
-- User confirmation before restart
-- Partial vs. complete conversation reset
-- State preservation for important data
-- Seamless transition to initial state
-- User communication during reset process
-
-### 🎯 User Experience Design
-
-**Confirmation Patterns:**
-- Clear and specific confirmation prompts
-- Easy-to-understand choices and options
-- Consistent confirmation flow across topics
-- User-friendly language and tone
-- Appropriate default selections
-
-**Error Recovery:**
-- Graceful handling of invalid responses
-- Clear error messages and guidance
-- Recovery options and alternative paths
-- User assistance and help availability
-- Escalation paths for persistent issues
-
-### 📊 Conversation Outcomes
-
-**Outcome Tracking:**
-- Conversation satisfaction measurement
-- Success and failure outcome capture
-- User journey completion tracking
-- Integration with analytics and reporting
-- Continuous improvement data collection
-
-**Integration Points:**
-- Connection with End of Conversation topic
-- Integration with escalation workflows
-- Handoff to human agents when needed
-- Data collection for conversation improvement
-- Feedback loop implementation
-
-### 🔧 Technical Implementation
-
-**Variable Management:**
-- Proper variable scoping (Topic, Global, Conversation)
-- Variable naming conventions and consistency
-- Data type handling and validation
-- Memory efficiency and cleanup
-- Cross-topic variable sharing
-
-**Flow Control:**
-- Conditional logic and branching
-- Loop prevention and infinite recursion protection
-- Topic priority and precedence rules
-- Interruption handling and recovery
-- Performance optimization for complex flows
+## ⚠️ YAML Formatting Critical
+- Use exactly 2 spaces for each indentation level
+- Never use tabs - only spaces
+- Maintain consistent alignment for all nested elements
+- Preserve original indentation structure when making improvements
 
 ### 📚 Reference Guidelines
 - [System Topics](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-system-topics)

@@ -5,145 +5,117 @@
 ```
 Review this Microsoft Copilot Studio regular topic YAML against official best practices from https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/topic-authoring-best-practices and https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/trigger-phrases-best-practices.
 
-Check and improve:
-1. Trigger phrases optimization (5-10 varied, natural phrases under 10 words)
-2. Topic structure and organization (bite-size, reusable)
-3. Conversational design and user experience
-4. Entity usage and slot filling optimization
-5. Variable management and data flow
-6. Integration with other topics and system components
-7. Question design and response handling
-8. YAML structure and formatting
+⚠️ CRITICAL YAML FORMATTING: 
+- PRESERVE the exact indentation and formatting when providing corrected YAML
+- YAML is indentation-sensitive and incorrect spacing will break the file structure
+- Use exactly 2 spaces for each indentation level consistently
+- NEVER use tabs - only spaces
+- Maintain proper alignment for all nested elements
+- DO NOT modify structural elements like `id:`, `kind:`, `beginDialog:`, `intent:` - these are framework-required
+- DO NOT change line breaks or combine separate YAML properties on the same line
 
-Focus on official Microsoft recommendations for topic authoring, trigger phrases, conversational design, and user experience. Provide corrected YAML if issues found.
+🚨 STRUCTURAL PRESERVATION:
+- Keep `id: main` and `intent:` on separate lines exactly as they are
+- Preserve all framework-required YAML structure (kind, beginDialog, actions, etc.)
+- Only modify content within triggerQueries, prompts, and activity messages
+- Never merge separate YAML properties onto the same line
+
+🎯 MINIMAL CHANGES ONLY: Only suggest changes that:
+- Fix clear violations of Microsoft's official best practices
+- Address significant security, performance, or functionality issues  
+- Have substantial impact on user experience or bot effectiveness
+- Are explicitly recommended in official Microsoft documentation
+
+🚫 AVOID:
+- Adding unnecessary complexity (Switch statements, multiple questions, nested logic)
+- Creative additions that weren't in the original topic
+- Expanding simple topics into complex multi-step flows
+- Adding features not explicitly requested or needed
+- Over-engineering basic functionality
+- Modifying YAML structure elements (id, kind, beginDialog, intent, actions)
+- Changing indentation of existing properly formatted YAML
+- Combining separate YAML properties on the same line
+
+✅ FOCUS ON:
+1. **TRIGGER PHRASES OPTIMIZATION** (5-10 varied, natural phrases under 10 words):
+   - Use conversational, natural language
+   - Vary sentence structure and length
+   - Include different ways users might ask the same thing
+   - Avoid overly technical or verbose phrases
+   - Test for overlap with other topics
+   - Keep phrases under 10 words for better recognition
+   
+2. Simple prompt and response improvements
+3. Basic variable naming and entity usage fixes
+4. Critical YAML syntax errors
+5. Essential user experience improvements
+
+⚠️ YAML STRUCTURE WARNING: NEVER modify these framework elements:
+- `id: main` (keep exactly as is, on separate line)
+- `kind:` properties 
+- `beginDialog:` structure
+- `intent:` (must be on separate line after id)
+- `actions:` structure
+- Do NOT combine properties like "id: main intent:" - this breaks YAML
+
+KEEP IT SIMPLE: Most topics should remain simple question-answer patterns unless they already have complex logic that needs fixing.
 ```
 
 ## Component-Specific Guidelines
 
 ### ✅ Regular Topics Checklist
-- [ ] 5-10 optimized trigger phrases
-- [ ] Clear topic purpose and scope
-- [ ] Bite-size topic structure
-- [ ] Conversational prompts and responses
-- [ ] Proper entity usage and slot filling
-- [ ] Effective variable management
-- [ ] Good integration with other topics
-- [ ] User-friendly question design
-- [ ] Appropriate topic size and complexity
-- [ ] YAML structure and formatting correct
+- [ ] **TRIGGER PHRASES**: 5-10 optimized phrases (short, natural, varied)
+  - [ ] Each phrase under 10 words
+  - [ ] Natural, conversational language
+  - [ ] Varied sentence structures
+  - [ ] No overlap with other topics
+  - [ ] Cover different ways users might ask
+- [ ] Clear topic purpose and scope (single responsibility)
+- [ ] Simple, maintainable structure (avoid over-engineering)
+- [ ] User-friendly prompts and responses
+- [ ] Proper entity usage (only when needed)
+- [ ] Clean variable management
+- [ ] Appropriate topic complexity (keep it simple)
+- [ ] Correct YAML indentation (exactly 2 spaces per level)
 
-### 🎯 Topic Structure & Organization
+### 🎯 Essential Fixes Only
 
-**Bite-Size Topics:**
-- Single, clear purpose per topic
-- Manageable topic complexity
-- Reusable components and logic
-- Clear separation of concerns
-- Easy maintenance and updates
+### 🎯 Essential Fixes Only
 
-**Topic Relationships:**
-- Proper redirect actions to other topics
-- Input/output variable management
-- Shared logic extraction to reusable topics
-- Clear topic hierarchy and dependencies
-- Integration with system topics
+**Trigger Phrase Optimization (PRIMARY FOCUS):**
+- Keep 5-10 natural phrases under 10 words each
+- Ensure variety in phrasing and structure (questions, statements, commands)
+- Remove redundant or overly verbose phrases
+- Use conversational, user-friendly language
+- Test for overlap with other topics in the bot
+- Include different user intents (information seeking, action requests, etc.)
+- Examples of GOOD triggers: "book a room", "check availability", "what rooms do you have"
+- Examples of BAD triggers: "I would like to make a reservation for a room", "room booking functionality"
+- Use conversational, user-friendly language
 
-**Conversation Flow:**
-- Logical question sequences
-- Natural conversation progression
-- Appropriate branching and conditions
-- User choice handling and validation
-- Graceful error handling and recovery
+**Basic Structure Improvements:**
+- Maintain single, clear purpose per topic
+- Keep complexity manageable and maintainable
+- Fix critical YAML syntax errors
+- Ensure proper variable scoping
 
-### 💬 Conversational Design
-
-**Question Design:**
-- Clear and specific prompts
-- User-friendly language and tone
-- Appropriate question types and entities
-- Helpful context and instructions
-- Progress indication for multi-step flows
-
-**Response Handling:**
-- Comprehensive entity value coverage
-- User input validation and error handling
-- Contextual and personalized responses
-- Follow-up questions and clarifications
-- Integration with subsequent topic flow
-
-**User Experience:**
+**Simple User Experience:**
+- Clear, concise prompts and questions
+- Appropriate entity usage (don't over-engineer)
+- Basic error handling where essential
 - Natural conversation flow
-- Appropriate use of quick replies and suggestions
-- Clear progress indicators
-- Help and clarification options
-- Consistent tone and personality
 
-### 🏷️ Entity Usage & Slot Filling
-
-**Entity Selection:**
-- Appropriate entity types for data collection
-- Comprehensive value lists and synonyms
-- User-friendly display names
-- Proper entity scope and reusability
-- Integration with conversation flow
-
-**Slot Filling Optimization:**
-- Efficient entity extraction from user input
-- Skip unnecessary questions when entities detected
-- Clear entity validation and error handling
-- Appropriate default values and suggestions
-- Integration with topic logic
-
-### 🔗 Integration & Reusability
-
-**Topic Integration:**
-- Proper redirect actions to other topics
-- Variable passing and data sharing
-- Integration with system topics (Fallback, Error, etc.)
-- External service and action integration
-- Knowledge source and search integration
-
-**Reusability Design:**
-- Shared logic extraction to separate topics
-- Common entity definitions and reuse
-- Template patterns for similar topics
-- Modular design for easy maintenance
-- Configuration-driven topic behavior
-
-### 📊 Performance & Monitoring
-
-**Topic Performance:**
-- Trigger phrase effectiveness monitoring
-- User completion rate tracking
-- Error rate and failure point analysis
-- Response time and efficiency optimization
-- User satisfaction measurement
-
-**Continuous Improvement:**
-- Analytics-driven trigger phrase refinement
-- User feedback integration
-- A/B testing for conversation flows
-- Regular review and optimization cycles
-- Knowledge base updates and improvements
-
-### 🔧 Technical Implementation
-
-**Variable Management:**
-- Proper variable scoping and naming
-- Data type validation and handling
-- Variable cleanup and memory management
-- Cross-topic variable sharing
-- Integration with external data sources
-
-**Error Handling:**
-- Input validation and error prevention
-- Clear error messages and recovery options
-- Fallback behavior for unexpected inputs
-- Integration with system error handling
-- User guidance and assistance
+**YAML Technical Requirements:**
+- Exactly 2 spaces for each indentation level
+- Never use tabs - only spaces
+- Maintain consistent alignment for nested elements
+- Preserve original structure when making improvements
+- DO NOT modify framework properties: `id:`, `kind:`, `beginDialog:`, `intent:`, `actions:`
+- DO NOT combine YAML properties on the same line (e.g., "id: main intent:" is INVALID)
+- Only edit content within arrays like triggerQueries and text content like prompts/activities
 
 ### 📚 Reference Guidelines
 - [Topic Authoring Best Practices](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/topic-authoring-best-practices)
 - [Trigger Phrases Best Practices](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/trigger-phrases-best-practices)
-- [Conversational Design](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/choose-effective-trigger-phrases)
-- [Entity and Slot Filling](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/slot-filling-best-practices)
+- [Choosing Effective Trigger Phrases](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/choose-effective-trigger-phrases)
+- [Topic Triggering Guidelines](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/triggering-topics)
