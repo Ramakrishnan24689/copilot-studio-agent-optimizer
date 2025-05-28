@@ -1,12 +1,16 @@
-# Optimize C### How It Works
-1. **Add a prompt file** (best practices instructions) to GitHub Copilot Chat context
-2. **Add your YAML file** to the same context  
-3. **Ask for optimization** - Copilot now knows exactly what to look for and how to improve it
-4. **Get Microsoft-aligned suggestions** based on official documentationt Studio Agents
+# Optimize Copilot Studio Agents
 
 ![VS Code Extensions Setup](./images/banner.png)
 
 **Curated Best Practices Instructions for GitHub Copilot Chat**
+
+### How It Works
+1. **Add a prompt file** (best practices instructions) to GitHub Copilot Chat context
+2. **Add your YAML file** to the same context  
+3. **Ask for optimization** - Copilot now knows exactly what to look for and how to improve it
+4. **Get Microsoft-aligned suggestions** based on official documentation
+
+**Transform trigger phrases from 2-3 basic phrases to 5-10 natural variations, enhance conversation quality, and ensure production-ready agent configurations - all through guided AI optimization.**
 
 ## 🎯 What is This?
 
@@ -270,7 +274,7 @@ Result: GitHub Copilot optimizes your topic against Microsoft's best practices a
 4. **Add context sources** using the "Add context" button:
    - Select the appropriate prompt file from `prompts/` folder
    - Add your agent's YAML files from the cloned subdirectory
-5. **Ask for analysis** with both contexts available
+5. **Ask for optimization** with both contexts available
 
 #### Example Workflow:
 ```
@@ -286,7 +290,7 @@ Result: GitHub Copilot optimizes your topic against Microsoft's best practices a
 ### Why This Approach Works
 
 - **No new tools needed** - Uses GitHub Copilot you already have
-- **Expert-level analysis** - AI gets the same knowledge a Microsoft consultant would use
+- **Expert-level optimization** - AI gets the same knowledge a Microsoft consultant would use
 - **Consistent quality** - Same standards applied across all team members
 - **Real-time feedback** - Get suggestions while you're actively editing
 
@@ -294,7 +298,7 @@ Result: GitHub Copilot optimizes your topic against Microsoft's best practices a
 
 ### **Turn GitHub Copilot into a Copilot Studio Expert**
 - **Knowledge injection** - Each prompt file contains official Microsoft best practices
-- **Context-aware analysis** - AI understands your specific YAML structure and provides targeted suggestions
+- **Context-aware optimization** - AI understands your specific YAML structure and provides targeted suggestions
 - **Consistent standards** - Ensures all team members get the same expert-level guidance
 
 ### **Seamless Integration with Your Workflow**
@@ -304,10 +308,10 @@ Result: GitHub Copilot optimizes your topic against Microsoft's best practices a
 
 ### **Quality at Scale**
 - **Microsoft-aligned** - Based on official documentation, not opinions
-- **Repeatable process** - Same high-quality analysis every time
+- **Repeatable process** - Same high-quality optimization every time
 - **Team consistency** - Everyone gets expert-level guidance regardless of experience
 
-**The key insight: Instead of learning all the best practices yourself, teach them to GitHub Copilot once and get expert analysis on demand.**
+**The key insight: Instead of learning all the best practices yourself, teach them to GitHub Copilot once and get expert optimization on demand.**
 
 ## Based on Official Microsoft Guidelines
 
@@ -341,4 +345,4 @@ All prompts are created based on official Microsoft Learn documentation:
 | Agent Config | `agent.mcs.yml` | [AgentConfiguration_BestPractices.md](./prompts/AgentConfiguration_BestPractices.md) |
 | Entities | `entities/*.mcs.yml` | [Entities_BestPractices.md](./prompts/Entities_BestPractices.md) |
 
-Each prompt is standalone and can be used independently for focused component analysis and improvement.
+Each prompt is standalone and can be used independently for focused component optimization and improvement.
