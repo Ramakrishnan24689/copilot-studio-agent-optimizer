@@ -5,6 +5,34 @@
 ```
 Review this Microsoft Copilot Studio agent configuration YAML against official best practices from https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-ai-features and agent configuration guidelines.
 
+**KEY MICROSOFT BEST PRACTICES TO APPLY:**
+
+**📋 AGENT INSTRUCTIONS:**
+- **Role Definition**: Clearly state what the agent is (e.g., "You are a customer service representative for...")
+- **Behavioral Guidelines**: Define tone (friendly, professional, helpful), communication style, and boundaries
+- **Task Scope**: Specify what the agent can and cannot do
+- **Response Format**: Guide how the agent should structure answers
+- **Example**: "You are a friendly energy drink expert who helps customers find their perfect beverage match. Always be enthusiastic about products, ask clarifying questions about taste preferences, and provide detailed product information. If asked about medical advice, politely decline and suggest consulting a healthcare professional."
+
+**💬 CONVERSATION STARTERS:**
+- **Provide 3-5 diverse starters** that showcase different agent capabilities
+- **Use natural language** that real users would type or say
+- **Cover main use cases**: Information requests, troubleshooting, product inquiries
+- **Make them actionable**: Clear what the user will get from each starter
+- **Examples**: "What energy drinks do you have?", "Help me find a low-caffeine option", "Tell me about your ingredients"
+
+**🤖 GPT CAPABILITIES:**
+- **Enable relevant features**: Generative answers for knowledge-based responses
+- **Set appropriate limits**: Content filtering, response length controls
+- **Configure knowledge integration**: Link to relevant data sources
+- **Avoid over-engineering**: Don't enable every feature unless needed
+
+**🎭 AGENT IDENTITY:**
+- **Consistent personality**: Maintain same tone and style across all interactions
+- **Clear value proposition**: Users should understand what makes this agent useful
+- **Appropriate expertise level**: Match complexity to target audience
+- **Professional boundaries**: Know when to escalate or refer to humans
+
 ⚠️ CRITICAL YAML FORMATTING: 
 - PRESERVE the exact indentation and formatting when providing corrected YAML
 - YAML is indentation-sensitive and incorrect spacing will break the file structure
@@ -20,6 +48,13 @@ Review this Microsoft Copilot Studio agent configuration YAML against official b
 - Only modify content within instruction text and conversation starter messages
 - Never merge separate YAML properties onto the same line
 
+🔒 **WHEN NOT TO MAKE CHANGES - READ THIS FIRST:**
+
+**If the agent configuration already meets Microsoft best practices, DO NOT modify anything. Simply respond with:**
+"✅ **No changes needed.** This agent configuration already follows Microsoft Copilot Studio best practices with proper role definition, appropriate conversation starters, and correct YAML formatting."
+
+**Only make changes if you identify CLEAR violations of official Microsoft best practices.**
+
 🎯 MINIMAL CHANGES ONLY: Only suggest changes that:
 - Fix clear violations of Microsoft's official best practices
 - Address significant security, performance, or functionality issues
@@ -27,6 +62,7 @@ Review this Microsoft Copilot Studio agent configuration YAML against official b
 - Are explicitly recommended in official Microsoft documentation
 
 🚫 AVOID:
+- Making changes when configuration is already well-structured
 - Adding unnecessary complexity to agent configurations
 - Creative additions that weren't in the original agent setup
 - Over-engineering basic agent functionality
@@ -34,6 +70,7 @@ Review this Microsoft Copilot Studio agent configuration YAML against official b
 - Modifying agent YAML structure elements (kind, name, instructions, conversationStarters)
 - Changing indentation of existing properly formatted YAML
 - Combining separate YAML properties on the same line
+- Making stylistic changes that don't improve functionality
 
 ✅ FOCUS ON:
 1. Agent instruction clarity fixes
@@ -49,7 +86,74 @@ Review this Microsoft Copilot Studio agent configuration YAML against official b
 - Do NOT combine properties like "kind: name:" - this breaks YAML
 5. Basic agent personality setting corrections
 
-KEEP IT SIMPLE: Most agent configurations should maintain their core functionality unless there are clear violations to fix.
+## 🔧 EDITING PRECISION REQUIREMENTS
+
+**CRITICAL**: When editing agent configuration YAML files, tools must use surgical precision:
+
+- ✅ **Target content only**: Modify instruction text, conversation starter messages, personality settings
+- ❌ **Never touch framework**: Avoid `kind:`, `name:`, `instructions:`, `conversationStarters:`
+- ✅ **Preserve agent identity**: Keep core agent configuration structure intact
+- ❌ **No structural changes**: Never merge separate YAML agent properties
+
+## 📝 SAFE EDITING PRACTICES
+
+### ✅ SAFE: Instruction Content Updates
+```yaml
+# BEFORE:
+instructions: "You are a helpful assistant."
+
+# AFTER: 
+instructions: "You are a friendly energy drink expert who helps customers find their perfect beverage match."
+```
+
+### ❌ DANGEROUS: Framework Modification
+```yaml
+# NEVER DO THIS:
+kind: Agent name: EnergyDrinkBot  # ← BREAKS YAML STRUCTURE
+
+# CORRECT:
+kind: Agent
+name: EnergyDrinkBot
+```
+
+## 🛡️ AGENT CONFIG YAML VALIDATION CHECKLIST
+
+After every edit, verify:
+- [ ] All agent properties remain on separate lines
+- [ ] Agent name and identity preserved
+- [ ] Instruction text properly formatted and quoted if needed
+- [ ] No framework elements (`kind:`, `name:`, `instructions:`, `conversationStarters:`) modified
+- [ ] Conversation starters remain as proper list items
+
+## 🚨 AGENT CONFIG-SPECIFIC YAML ERRORS TO AVOID
+
+1. **Property Merging**: `kind: Agent name:` ← NEVER
+2. **Identity Breaking**: Modifying agent name structure ← CONFIGURATION FAILURE
+3. **Instruction Corruption**: Invalid instruction formatting ← BEHAVIOR ERROR
+4. **Starter Violation**: Wrong conversation starter list format ← UI FAILURE
+
+## 🔍 EVALUATION FRAMEWORK - Use This Decision Tree
+
+**STEP 1: Quick Assessment**
+- ✅ Does it have clear role definition? ("You are a...")
+- ✅ Are there 3-5 conversation starters?
+- ✅ Is the YAML properly formatted?
+- ✅ Are instructions clear and professional?
+
+**If ALL answers are YES → No changes needed!**
+
+**STEP 2: Only if Step 1 reveals issues, check for:**
+- Missing role definition in instructions
+- Too few (<3) or too many (>5) conversation starters
+- YAML formatting errors
+- Vague or unprofessional instructions
+- Security/privacy violations
+
+**STEP 3: Response Format**
+- **No Issues Found**: "✅ No changes needed. Configuration follows best practices."
+- **Issues Found**: Make minimal targeted fixes only for identified violations
+
+KEEP IT SIMPLE: Focus on improving agent personality and instructions without changing core configuration structure.
 ```
 
 ## Component-Specific Guidelines

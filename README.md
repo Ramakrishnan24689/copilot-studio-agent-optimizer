@@ -1,5 +1,7 @@
 # AI-Powered Agent Optimizer for Microsoft Copilot Studio
 
+![VS Code Extensions Setup](./images/banner.png)
+
 **Automated YAML Optimization & Best Practice Enforcement using GitHub Copilot**
 
 ## 🎯 What is This?
@@ -82,22 +84,22 @@ This approach keeps everything in one workspace, making it easy for GitHub Copil
 
 **Example Command:**
 ```
-Using the provided best practices prompt, please analyze my [YourTopicName] topic and suggest improvements following Microsoft standards.
+Using the Custom Topics Best Practices as context, evaluate the given [Your custom topic name here] YAML and modify it as needed.
 ```
 
->![Simplified workflow](./images/copy-paste-workflow.png)
+>![Simplified workflow](./images/copilot-studio-prompt.gif)
 
 ### 5️⃣ **See the Transformation**
 
-#### RegularTopic Before vs After Example
+#### CustomTopic Before vs After Example
 
 **Before Optimization - Poor Topic Structure:**
-![RegularTopic Before](./images/regular-topic-before.png)
-*Image placeholder: Screenshot of a poorly structured RegularTopic.mcs.yml with minimal trigger phrases, basic responses, and no entity usage*
+![CustomTopic Before](./images/topic-before.png)
+*Image placeholder: Screenshot of a poorly structured CustomTopic.mcs.yml with minimal trigger phrases, basic responses, and no entity usage*
 
 **After Optimization - Enhanced Topic Structure:**
-![RegularTopic After](./images/regular-topic-after.png)
-*Image placeholder: Screenshot of optimized RegularTopic.mcs.yml with 5-10 varied trigger phrases, conversational responses, proper entity integration, and clear conversation flow*
+![CustomTopic After](./images/topic-after.png)
+*Image placeholder: Screenshot of optimized CustomTopic.mcs.yml with 5-10 varied trigger phrases, conversational responses, proper entity integration, and clear conversation flow*
 
 #### Key Improvements Demonstrated:
 - **Trigger Phrases:** Expanded from 2-3 basic phrases to 5-10 natural variations
@@ -112,11 +114,10 @@ Using the provided best practices prompt, please analyze my [YourTopicName] topi
 
 **Before Optimization - Basic Interaction:**
 ![User Experience Before](./images/user-experience-before.png)
-*Image placeholder: Chat showing user struggling to trigger the topic, agent giving robotic responses*
 
 **After Optimization - Natural Conversation:**
 ![User Experience After](./images/user-experience-after.png)
-*Image placeholder: Chat showing smooth topic recognition, engaging responses, and helpful follow-up questions*
+
 
 #### Specific Improvement Example (RegularTopic):
 
@@ -137,8 +138,6 @@ Using the provided best practices prompt, please analyze my [YourTopicName] topi
 
 ## 📋 Available Prompts
 
-## 📋 Available Prompts
-
 ### 1. 📝 [System Topics](./prompts/SystemTopics_BestPractices.md)
 **Use for:** Fallback, Greeting, Goodbye, ConversationStart, EndofConversation, etc.
 - System trigger configuration
@@ -146,57 +145,57 @@ Using the provided best practices prompt, please analyze my [YourTopicName] topi
 - User experience design
 - Error handling patterns
 
-### 2. 🎯 [Triggers & Intent Recognition](./prompts/Triggers_BestPractices.md)
-**Use for:** Topic trigger phrases and intent configuration
+### 2. 💬 [Regular Topics](./prompts/CustomTopics_BestPractices.md)
+**Use for:** Custom business logic topics with trigger phrase optimization
+- Topic structure and organization
 - Trigger phrase optimization (5-10 varied phrases)
+- Conversational design
+- Entity usage and slot filling
 - Natural language understanding
-- Topic overlap prevention
-- Intent recognition effectiveness
+- Integration with other components
 
-### 3. 💬 [Regular Topics](./prompts/CustomTopics_BestPractices.md)
+### 3. 🧠 [Knowledge & Search](./prompts/Knowledge_BestPractices.md)
 **Use for:** Custom business logic topics
 - Topic structure and organization
 - Conversational design
 - Entity usage and slot filling
 - Integration with other components
 
-### 4. 🧠 [Knowledge & Search](./prompts/Knowledge_BestPractices.md)
+### 4. ⚙️ [Actions & Power Automate](./prompts/Actions_BestPractices.md)
 **Use for:** Search.mcs.yml and knowledge integration
 - SearchAndSummarizeContent configuration
 - Knowledge source integration
 - Response quality optimization
 - Performance considerations
 
-### 5. ⚙️ [Actions & Power Automate](./prompts/Actions_BestPractices.md)
+### 5. 🌐 [Bot Settings & Configuration](./prompts/BotSettings_BestPractices.md)
 **Use for:** External service integrations and automations
 - Connection configuration
 - Input/output mapping
 - Error handling and security
 - User experience during execution
 
-### 6. 🌐 [Bot Settings & Configuration](./prompts/BotSettings_BestPractices.md)
+### 6. 🔄 [Conversation Management](./prompts/ConversationManagement_BestPractices.md)
 **Use for:** settings.mcs.yml and bot-level configuration
 - Authentication and security
 - AI settings optimization
 - Feature enablement
 - Performance configuration
 
-### 7. 🔄 [Conversation Management](./prompts/ConversationManagement_BestPractices.md)
+### 7. 🤖 [Agent Configuration](./prompts/AgentConfiguration_BestPractices.md)
 **Use for:** StartOver, Reset, state management topics
 - User confirmation flows
 - State management
 - Variable cleanup
 - Dialog control
 
-### 8. 🤖 [Agent Configuration](./prompts/AgentConfiguration_BestPractices.md)
+### 8. 🏷️ [Entities & Data Types](./prompts/Entities_BestPractices.md)
 **Use for:** agent.mcs.yml and GPT agent behavior configuration
 - Agent instructions and behavior
 - Conversation starters optimization
 - GPT capabilities configuration
 - Agent personality and tone
 
-### 9. 🏷️ [Entities & Data Types](./prompts/Entities_BestPractices.md)
-**Use for:** entities/*.mcs.yml and data type definitions
 - Entity type selection and configuration
 - Value definitions and synonyms
 - Smart matching optimization
