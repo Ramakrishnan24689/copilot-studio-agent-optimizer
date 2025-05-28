@@ -35,6 +35,8 @@ This repository contains **specialized prompt files** that teach GitHub Copilot 
 
 ## Quick Start Guide
 
+**Follow the steps mentioned below**
+
 ### 0️⃣ **Prerequisites**
 Before you begin, ensure you have:
 
@@ -114,11 +116,9 @@ Using the Custom Topics Best Practices as context, evaluate the given [Your cust
 
 **Before Optimization - Poor Topic Structure:**
 ![CustomTopic Before](./images/topic-before.png)
-*Image placeholder: Screenshot of a poorly structured CustomTopic.mcs.yml with minimal trigger phrases, basic responses, and no entity usage*
 
 **After Optimization - Enhanced Topic Structure:**
 ![CustomTopic After](./images/topic-after.png)
-*Image placeholder: Screenshot of optimized CustomTopic.mcs.yml with 5-10 varied trigger phrases, conversational responses, proper entity integration, and clear conversation flow*
 
 #### Key Improvements Demonstrated:
 - **Trigger Phrases:** Expanded from 2-3 basic phrases to 5-10 natural variations
