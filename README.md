@@ -1,21 +1,33 @@
-# AI-Powered Agent Optimizer for Microsoft Copilot Studio
+# Optimize C### How It Works
+1. **Add a prompt file** (best practices instructions) to GitHub Copilot Chat context
+2. **Add your YAML file** to the same context  
+3. **Ask for optimization** - Copilot now knows exactly what to look for and how to improve it
+4. **Get Microsoft-aligned suggestions** based on official documentationt Studio Agents
 
 ![VS Code Extensions Setup](./images/banner.png)
 
-**Automated YAML Optimization & Best Practice Enforcement using GitHub Copilot**
+**Curated Best Practices Instructions for GitHub Copilot Chat**
 
 ## 🎯 What is This?
 
-Transform your Microsoft Copilot Studio agents from good to exceptional! This repository contains **AI-powered prompts** that automatically review and optimize your `.mcs.yml` files using **GitHub Copilot** directly in **Visual Studio Code**.
+This repository contains **specialized prompt files** that teach GitHub Copilot Chat how to optimize your Microsoft Copilot Studio `.mcs.yml` files according to official Microsoft best practices.
 
-**In 30 seconds:** Clone your project → Add context → Get optimized YAML → Apply improvements → Deploy better agents!
+**Simply put:** These are instruction sets that make GitHub Copilot an expert at optimizing your Copilot Studio YAML configurations.
+
+### How It Works
+1. **Add a prompt file** (best practices instructions) to GitHub Copilot Chat context
+2. **Add your YAML file** to the same context  
+3. **Ask for optimization** - Copilot now knows exactly what to look for and how to improve it
+4. **Get Microsoft-aligned suggestions** based on official documentation
+
+**Transform trigger phrases from 2-3 basic phrases to 5-10 natural variations, enhance conversation quality, and ensure production-ready agent configurations - all through guided AI optimization.**
 
 ### Key Benefits
-- **Instant optimization** - Get improvements in seconds, not hours
-- **Microsoft-aligned** - Based on official best practices and documentation  
-- **VS Code integrated** - Works seamlessly with your existing workflow
-- **AI-powered** - Leverages GPT-4o, Claude Sonnet, and other advanced models
-- **Component-specific** - Tailored prompts for each Copilot Studio component type
+- **Instant expertise** - Turn GitHub Copilot into a Copilot Studio expert
+- **Microsoft-aligned** - All instructions based on official best practices documentation
+- **VS Code integrated** - Works seamlessly with GitHub Copilot Chat in your existing workflow
+- **Component-specific** - Tailored instruction sets for each Copilot Studio component type
+- **No new tools** - Uses GitHub Copilot you already have
 
 ## Quick Start Guide
 
@@ -213,9 +225,34 @@ Changed from basic to more natural conversation
 
 ## How to Use These Prompts
 
-### Intended Workflow with Visual Studio Code + GitHub Copilot
+### The Core Concept: Teaching GitHub Copilot About Copilot Studio
 
-These prompts are designed to be used with the **Copilot Studio Extensions** in **Visual Studio Code** along with **GitHub Copilot** to automatically analyze and improve your Microsoft Copilot Studio YAML files based on official best practices.
+These prompt files are **instruction sets** that teach GitHub Copilot Chat how to properly optimize Microsoft Copilot Studio YAML files. Think of them as:
+
+- **Expert knowledge transfer** - Each prompt contains Microsoft's official best practices
+- **Context for AI optimization** - Tells Copilot exactly what to look for in your YAML
+- **Quality standards** - Defines what "good" looks like for each component type
+- **Guided improvements** - Provides specific criteria for optimization suggestions
+
+### Intended Workflow with GitHub Copilot Chat
+
+1. **Open GitHub Copilot Chat** in VS Code (Ctrl+Shift+I)
+2. **Add context files**:
+   - **Instruction file**: One of the prompt files from `prompts/` folder (teaches Copilot the best practices)
+   - **YAML file**: Your actual Copilot Studio configuration file (what needs to be optimized)
+3. **Ask for optimization**: "Using the best practices as context, evaluate my YAML and suggest improvements"
+4. **Get expert-level feedback** based on Microsoft's official guidelines
+
+**Example:**
+```
+Context Files Added:
+✅ prompts/CustomTopics_BestPractices.md (instruction set)
+✅ MyOrderTopic.mcs.yml (file to optimize)
+
+Prompt: "Using the Custom Topics Best Practices as context, evaluate my topic YAML and optimize it."
+
+Result: GitHub Copilot optimizes your topic against Microsoft's best practices and suggests specific improvements.
+```
 
 #### Recommended Setup:
 1. **Visual Studio Code** with Copilot Studio Extensions installed
@@ -243,25 +280,34 @@ These prompts are designed to be used with the **Copilot Studio Extensions** in 
 4. Open Copilot Chat (Ctrl+Shift+I)
 5. Add context: prompts/CustomTopics_BestPractices.md
 6. Add context: YourTopicName.mcs.yml (from cloned agent subdirectory)
-7. Ask: "Using the best practices prompt, analyze my topic and suggest improvements"
+7. Ask: "Using the best practices prompt, optimize my topic and suggest improvements"
 ```
 
-## Why Use These Prompts with VS Code + GitHub Copilot?
+### Why This Approach Works
 
-### **Intelligent Code Analysis**
-- **Context-aware suggestions** - AI models understand your entire project structure and relationships between YAML files
-- **Real-time validation** - Get immediate feedback on best practice compliance while editing
-- **Pattern recognition** - AI identifies common anti-patterns and suggests proven solutions
+- **No new tools needed** - Uses GitHub Copilot you already have
+- **Expert-level analysis** - AI gets the same knowledge a Microsoft consultant would use
+- **Consistent quality** - Same standards applied across all team members
+- **Real-time feedback** - Get suggestions while you're actively editing
 
-### **Seamless Development Experience**
-- **In-editor assistance** - No need to switch between tools or copy/paste between applications
-- **Project-aware recommendations** - Suggestions consider your specific bot configuration and existing topics
-- **Automated improvements** - AI can directly suggest code changes with proper YAML formatting
+## Why Use These Prompts with GitHub Copilot?
 
-### **Best Practice Enforcement**
-- **Microsoft-aligned guidance** - All prompts based on official Microsoft Learn documentation
-- **Consistent quality** - Ensure all team members follow the same standards
-- **Continuous improvement** - Regular analysis helps maintain code quality over time
+### **Turn GitHub Copilot into a Copilot Studio Expert**
+- **Knowledge injection** - Each prompt file contains official Microsoft best practices
+- **Context-aware analysis** - AI understands your specific YAML structure and provides targeted suggestions
+- **Consistent standards** - Ensures all team members get the same expert-level guidance
+
+### **Seamless Integration with Your Workflow**
+- **No context switching** - Everything happens in VS Code with tools you already use
+- **Real-time assistance** - Get feedback while editing, not after deployment
+- **Project-aware** - AI considers your entire bot configuration, not just individual files
+
+### **Quality at Scale**
+- **Microsoft-aligned** - Based on official documentation, not opinions
+- **Repeatable process** - Same high-quality analysis every time
+- **Team consistency** - Everyone gets expert-level guidance regardless of experience
+
+**The key insight: Instead of learning all the best practices yourself, teach them to GitHub Copilot once and get expert analysis on demand.**
 
 ## Based on Official Microsoft Guidelines
 
