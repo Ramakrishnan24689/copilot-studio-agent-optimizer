@@ -112,22 +112,12 @@ Using the Custom Topics Best Practices as context, evaluate the given [Your cust
 
 ### 5️⃣ **See the Transformation**
 
-#### CustomTopic Before vs After Example
-
-**Before Optimization - Poor Topic Structure:**
-![CustomTopic Before](./images/topic-before.png)
-
-**After Optimization - Enhanced Topic Structure:**
-![CustomTopic After](./images/topic-after.png)
-
 #### Key Improvements Demonstrated:
 - **Trigger Phrases:** Expanded from 2-3 basic phrases to 5-10 natural variations
 - **Conversation Design:** Enhanced from simple Q&A to engaging dialogue
 - **Entity Integration:** Added proper slot filling and entity validation
 - **Error Handling:** Improved fallback responses and user guidance
 - **Response Quality:** More conversational and contextually appropriate responses
-
-### 6️⃣ **Experience the Difference**
 
 #### End User Conversation Quality
 
