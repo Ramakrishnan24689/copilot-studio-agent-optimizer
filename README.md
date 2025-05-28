@@ -8,16 +8,16 @@
 
 Transform your Microsoft Copilot Studio agents from good to exceptional! This repository contains **AI-powered prompts** that automatically review and optimize your `.mcs.yml` files using **GitHub Copilot** directly in **Visual Studio Code**.
 
-**In 30 seconds:** Clone your project → Add context → Get optimized YAML → Apply improvements → Deploy better agents! 🚀
+**In 30 seconds:** Clone your project → Add context → Get optimized YAML → Apply improvements → Deploy better agents!
 
-### ✨ Key Benefits
-- ⚡ **Instant optimization** - Get improvements in seconds, not hours
-- 🎯 **Microsoft-aligned** - Based on official best practices and documentation  
-- 🔧 **VS Code integrated** - Works seamlessly with your existing workflow
-- 🧠 **AI-powered** - Leverages GPT-4o, Claude Sonnet, and other advanced models
-- 📊 **Component-specific** - Tailored prompts for each Copilot Studio component type
+### Key Benefits
+- **Instant optimization** - Get improvements in seconds, not hours
+- **Microsoft-aligned** - Based on official best practices and documentation  
+- **VS Code integrated** - Works seamlessly with your existing workflow
+- **AI-powered** - Leverages GPT-4o, Claude Sonnet, and other advanced models
+- **Component-specific** - Tailored prompts for each Copilot Studio component type
 
-## ⚡ Quick Start Guide
+## Quick Start Guide
 
 ### 0️⃣ **Prerequisites**
 Before you begin, ensure you have:
@@ -26,6 +26,7 @@ Before you begin, ensure you have:
 2. **Microsoft Copilot Studio Extension** for VS Code
    - Install from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-copilotstudio.vscode-copilotstudio)
    - Or search "Copilot Studio" in VS Code Extensions (`Ctrl+Shift+X`)
+   - **⚠️ Note:** The Copilot Studio Extension is currently in pre-release. Use with caution and test thoroughly in non-production environments.
 3. **GitHub Copilot** (free tier available, works with GPT-4o, Claude Sonnet, and other AI models)
 
 ![VS Code Extensions Setup](./images/vscode-extensions-setup.png)
@@ -35,7 +36,7 @@ First, you need to download this repository to access the prompt files:
 
 #### **Option A: Clone with Git (Recommended)**
 ```bash
-git clone https://github.com/[username]/copilot-studio-agent-optimizer.git
+git clone https://github.com/ramakrishnan24689/copilot-studio-agent-optimizer.git
 cd copilot-studio-agent-optimizer
 ```
 
@@ -47,7 +48,7 @@ cd copilot-studio-agent-optimizer
 #### **Option C: Open in VS Code directly**
 ```bash
 # Clone and open in VS Code in one command
-git clone https://github.com/[username]/copilot-studio-agent-optimizer.git && code copilot-studio-agent-optimizer
+git clone https://github.com/ramakrishnan24689/copilot-studio-agent-optimizer.git && code copilot-studio-agent-optimizer
 ```
 
 ### 2️⃣ **Choose Your Component**
@@ -56,7 +57,7 @@ Pick the prompt file that matches your YAML component:
 - `CustomTopic.mcs.yml` → Use [CustomTopics_BestPractices.md](./prompts/CustomTopics_BestPractices.md)
 - `Fallback.mcs.yml` → Use [SystemTopics_BestPractices.md](./prompts/SystemTopics_BestPractices.md)
 - `Search.mcs.yml` → Use [Knowledge_BestPractices.md](./prompts/Knowledge_BestPractices.md)
-- And so on... ([see full reference table](#🔧-component-quick-reference))
+- And so on... ([see full reference table](#component-quick-reference))
 
 ### 3️⃣ **Connect Your Copilot Studio Agent**
 
@@ -67,7 +68,9 @@ To use the AI-powered optimization, connect to your Copilot Studio agent directl
 3. **Select your environment** from the dropdown
 4. **Choose your agent** from the available agents in that environment
 5. **Clone your agent** to a local subdirectory(/cloned-agents) using the extension's clone option
+
 ![Clone Agent](./images/copilot-studio-extension-clone-agent.png)
+
 6. **Agent's YAML files will be accessible** in the VS Code workspace for optimization
 ![MCS files](./images/clone-agent-sub-directory.png)
 
@@ -77,7 +80,7 @@ This approach keeps everything in one workspace, making it easy for GitHub Copil
 
 1. **Ensure your agent is connected** in the Copilot Studio extension
 2. **Open Copilot Chat** (Ctrl+Shift+I or click the chat icon)  
-3. **Click "Add context"** (📎) to select files:
+3. **Click "Add context"** to select files:
    - Add the relevant prompt file from `prompts/` folder
    - Add your agent's YAML file from the connected workspace
 4. **Ask for optimization** using both contexts
@@ -112,11 +115,18 @@ Using the Custom Topics Best Practices as context, evaluate the given [Your cust
 
 #### End User Conversation Quality
 
-**Before Optimization - Basic Interaction:**
-![User Experience Before](./images/user-experience-before.png)
+**Before/After Optimization - Interaction:**
+![User Experience Before](./images/before-after-conversation.png)
 
-**After Optimization - Natural Conversation:**
-![User Experience After](./images/user-experience-after.png)
+Changed from basic to more natural conversation
+
+#### End User Conversation Quality
+
+**Agent Overview - Before**
+![Agent Instruction Before](./images/agent-settings-before.png)
+
+**Agent Overview - After**
+![Agent Instruction After](./images/agent-settings-after.png)
 
 
 #### Specific Improvement Example (RegularTopic):
@@ -130,22 +140,22 @@ Using the Custom Topics Best Practices as context, evaluate the given [Your cust
 - ✅ **After:** "I found your order! Here's the current status: [order_status]. Would you like me to explain what this means or help you with anything else regarding your order?"
 
 #### Developer Benefits:
-- ⚡ **5-10 minutes** to optimize each topic (vs hours of manual review)
-- 🎯 **Better user satisfaction** through improved conversation quality
-- 📊 **Higher intent recognition** rates with optimized trigger phrases
+- **5-10 minutes** to optimize each topic (vs hours of manual review)
+- **Better user satisfaction** through improved conversation quality
+- **Higher intent recognition** rates with optimized trigger phrases
 
 ---
 
 ## 📋 Available Prompts
 
-### 1. 📝 [System Topics](./prompts/SystemTopics_BestPractices.md)
+### 1. [System Topics](./prompts/SystemTopics_BestPractices.md)
 **Use for:** Fallback, Greeting, Goodbye, ConversationStart, EndofConversation, etc.
 - System trigger configuration
 - Conversation flow logic
 - User experience design
 - Error handling patterns
 
-### 2. 💬 [Regular Topics](./prompts/CustomTopics_BestPractices.md)
+### 2. [Regular Topics](./prompts/CustomTopics_BestPractices.md)
 **Use for:** Custom business logic topics with trigger phrase optimization
 - Topic structure and organization
 - Trigger phrase optimization (5-10 varied phrases)
@@ -154,42 +164,42 @@ Using the Custom Topics Best Practices as context, evaluate the given [Your cust
 - Natural language understanding
 - Integration with other components
 
-### 3. 🧠 [Knowledge & Search](./prompts/Knowledge_BestPractices.md)
+### 3. [Knowledge & Search](./prompts/Knowledge_BestPractices.md)
 **Use for:** Custom business logic topics
 - Topic structure and organization
 - Conversational design
 - Entity usage and slot filling
 - Integration with other components
 
-### 4. ⚙️ [Actions & Power Automate](./prompts/Actions_BestPractices.md)
+### 4. [Actions & Power Automate](./prompts/Actions_BestPractices.md)
 **Use for:** Search.mcs.yml and knowledge integration
 - SearchAndSummarizeContent configuration
 - Knowledge source integration
 - Response quality optimization
 - Performance considerations
 
-### 5. 🌐 [Bot Settings & Configuration](./prompts/BotSettings_BestPractices.md)
+### 5. [Bot Settings & Configuration](./prompts/BotSettings_BestPractices.md)
 **Use for:** External service integrations and automations
 - Connection configuration
 - Input/output mapping
 - Error handling and security
 - User experience during execution
 
-### 6. 🔄 [Conversation Management](./prompts/ConversationManagement_BestPractices.md)
+### 6. [Conversation Management](./prompts/ConversationManagement_BestPractices.md)
 **Use for:** settings.mcs.yml and bot-level configuration
 - Authentication and security
 - AI settings optimization
 - Feature enablement
 - Performance configuration
 
-### 7. 🤖 [Agent Configuration](./prompts/AgentConfiguration_BestPractices.md)
+### 7. [Agent Configuration](./prompts/AgentConfiguration_BestPractices.md)
 **Use for:** StartOver, Reset, state management topics
 - User confirmation flows
 - State management
 - Variable cleanup
 - Dialog control
 
-### 8. 🏷️ [Entities & Data Types](./prompts/Entities_BestPractices.md)
+### 8. [Entities & Data Types](./prompts/Entities_BestPractices.md)
 **Use for:** agent.mcs.yml and GPT agent behavior configuration
 - Agent instructions and behavior
 - Conversation starters optimization
@@ -201,7 +211,7 @@ Using the Custom Topics Best Practices as context, evaluate the given [Your cust
 - Smart matching optimization
 - Slot filling integration
 
-## 🚀 How to Use These Prompts
+## How to Use These Prompts
 
 ### Intended Workflow with Visual Studio Code + GitHub Copilot
 
@@ -220,7 +230,7 @@ These prompts are designed to be used with the **Copilot Studio Extensions** in 
    - Choose your agent from the available list
    - Clone the agent to a local subdirectory using the extension
 3. **Open Copilot Chat** (Ctrl+Shift+I)
-4. **Add context sources** using the "Add context" button (📎):
+4. **Add context sources** using the "Add context" button:
    - Select the appropriate prompt file from `prompts/` folder
    - Add your agent's YAML files from the cloned subdirectory
 5. **Ask for analysis** with both contexts available
@@ -236,7 +246,7 @@ These prompts are designed to be used with the **Copilot Studio Extensions** in 
 7. Ask: "Using the best practices prompt, analyze my topic and suggest improvements"
 ```
 
-## 🎯 Why Use These Prompts with VS Code + GitHub Copilot?
+## Why Use These Prompts with VS Code + GitHub Copilot?
 
 ### **Intelligent Code Analysis**
 - **Context-aware suggestions** - AI models understand your entire project structure and relationships between YAML files
@@ -253,7 +263,7 @@ These prompts are designed to be used with the **Copilot Studio Extensions** in 
 - **Consistent quality** - Ensure all team members follow the same standards
 - **Continuous improvement** - Regular analysis helps maintain code quality over time
 
-## 📚 Based on Official Microsoft Guidelines
+## Based on Official Microsoft Guidelines
 
 All prompts are created based on official Microsoft Learn documentation:
 - [Topic Authoring Best Practices](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/topic-authoring-best-practices)
@@ -262,7 +272,7 @@ All prompts are created based on official Microsoft Learn documentation:
 - [System Topics](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-system-topics)
 - [Configuration Fundamentals](https://learn.microsoft.com/en-us/microsoft-copilot-studio/configuration-fundamentals)
 
-## ⚠️ Important Notes
+## Important Notes
 
 - **Integrate with VS Code workflow** - Use these prompts within your existing Copilot Studio development environment
 - **Leverage AI assistance** - GitHub Copilot's AI models provide context-aware suggestions based on your project structure
@@ -272,7 +282,7 @@ All prompts are created based on official Microsoft Learn documentation:
 - **Test changes thoroughly** - Validate improvements in test environment first
 - **Use VS Code extensions** - Take advantage of YAML validation and Copilot Studio tooling
 
-## 🔧 Component Quick Reference
+## Component Quick Reference
 
 | Component Type | File Pattern | Prompt File |
 |---|---|---|
