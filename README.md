@@ -128,6 +128,8 @@ Changed from basic to more natural conversation
 
 #### End User Conversation Quality
 
+Agent instructions modified based on the description and title. 
+
 **Agent Overview - Before**
 ![Agent Instruction Before](./images/agent-settings-before.png)
 
